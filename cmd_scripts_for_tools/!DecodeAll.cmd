@@ -1,0 +1,1 @@
+for %%f in (regs_res\GlobalMap\*.reg) do Call .\!Decode %%f %%~nf

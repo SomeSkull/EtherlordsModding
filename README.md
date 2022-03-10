@@ -26,12 +26,16 @@ reg2ini.exe creatures.reg > creatures.ini
 ini2reg.exe creatures.ini
 
 ## Contents of this repository
-Every mod has it's own folder which contains the modyfied .ini files for only the mod content. If possible these files are created as purely _additive .ini content, which you can simply copy/paste into the original .ini file. This makes it possible to easily create combinations of mods with purely additive content. Of course other mods, i.e. rebalancing mods or community patches, will want to have _modifying .ini files. In this case, if somebody wants to combine mods, you will have to look up the original entries and replace them with the modified content by hand. Of course this can be automated, but i won't start that on my own if i end up being the only one interested in modding these great games ;)
+So, below was my original stance on this topic. But unfortunately i had to find out, that while the menu and overworld part of the game allows additional spell definitions without any problem, the battle part crashes if we don't mod the code as well. The applicable piece of code seems to be at address 00657c3f (with the actual checks starting at 00657ca2), but as i'm not very experienced in creating code caves, this might take a while... So my current take is - either know how to do a little programming/hacking yourself and use these adresses, or try to just edit the original .ini files. When we have a working code cave, we can probably do more :)
+
+>Every mod has it's own folder which contains the modyfied .ini files for only the mod content. If possible these files are created as purely _additive .ini content, which you can simply copy/paste into the original .ini file. This makes it possible to easily create combinations of mods with purely additive content. Of course other mods, i.e. rebalancing mods or community patches, will want to have _modifying .ini files. In this case, if somebody wants to combine mods, you will have to look up the original entries and replace them with the modified content by hand. Of course this can be automated, but i won't start that on my own if i end up being the only one interested in modding these great games ;)
 
 You will also find a folder named 'originals'. Those are not the original game files, but rather the unpacked and converted regs.res .ini files. This has multiple reasons:
 1. The aforementioned worry about copyright, because i don't know Nivals stance on that yet
 2. To jumpstart other mods and ideas, that want to have a readable look at the original settings
 3. To give people the possibility to contribute without relying on the tools above - you can use the originals to create modified .ini files and have other helpful people do the packing :)
+
+To ease the use of tools, i've also added a few .cmd scripts if you want to Unpack or pack everything. You can find them in the folder cmd_scripts_for_tools
 
 ## How to contribute
 If you want to contribute to the mods existing here, or want to start modding yourself, simply create a pull request with your changes and add a description of what you want to achieve with your changes. If you want me to pack your modified .ini files into a regs.res, be prepared to wait a bit, but in general i can do that for you.

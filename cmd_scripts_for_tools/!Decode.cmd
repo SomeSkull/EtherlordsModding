@@ -1,0 +1,1 @@
+reg2ini.exe %1 > ..\originals\EL2\GlobalMap\%2.ini

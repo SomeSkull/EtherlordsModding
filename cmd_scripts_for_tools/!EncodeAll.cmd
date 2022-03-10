@@ -1,0 +1,1 @@
+for %%f in (.\ini_temp\*.ini) do Call .\!Encode %%f

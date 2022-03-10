@@ -1,0 +1,1 @@
+Ini2Reg.exe %1
